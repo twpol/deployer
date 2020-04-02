@@ -43,7 +43,8 @@
     "http-errors": "^1.7.3",
     "less-middleware": "^3.1.0",
     "morgan": "^1.10.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.2.0",

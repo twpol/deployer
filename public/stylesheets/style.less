@@ -1,8 +1,42 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import (less) "../../node_modules/reset-css/reset.css";
+
+.background(@background) {
+  @background-inverted: hsl(
+    hue(@background),
+    saturation(@background),
+    100 - lightness(@background)
+  );
+
+  background: @background;
+  color: contrast(@background);
+
+  @media (prefers-color-scheme: dark) {
+    background: @background-inverted;
+    color: contrast(@background-inverted);
+  }
 }
 
-a {
-  color: #00b7ff;
+html {
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .background(#fff);
+
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      padding: 16px;
+    }
+
+    > header,
+    > footer {
+      .background(hsl(30deg, 100%, 50%));
+    }
+
+    > main {
+      flex: 1;
+    }
+  }
 }
