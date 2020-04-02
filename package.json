@@ -1,0 +1,58 @@
+{
+  "name": "deployer",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "local": "cross-env DEBUG=deployer:* nodemon ./bin/www",
+    "lint": "eslint **/*.js"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "consistent",
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "extends": "eslint:recommended"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "less-middleware": "^3.1.0",
+    "morgan": "^1.10.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.2.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.2",
+    "pretty-quick": "^2.0.1"
+  }
+}
