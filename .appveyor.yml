@@ -1,0 +1,9 @@
+version: 1.0.{build}
+skip_branch_with_pr: true
+environment:
+  nodejs_version: "12"
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - yarn install --frozen-lockfile
+build_script:
+  - yarn lint
