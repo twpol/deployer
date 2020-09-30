@@ -47,7 +47,7 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "@prettier/plugin-pug": "^1.6.1",
+    "@prettier/plugin-pug": "^1.7.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.10.0",
     "husky": "^4.3.0",
