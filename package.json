@@ -49,7 +49,7 @@
   "devDependencies": {
     "@prettier/plugin-pug": "^1.13.5",
     "cross-env": "^7.0.3",
-    "eslint": "^7.20.0",
+    "eslint": "^7.21.0",
     "husky": "^5.1.2",
     "lint-staged": "^10.5.4",
     "nodemon": "^2.0.7",
